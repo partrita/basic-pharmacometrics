@@ -22,9 +22,22 @@ jobs:
         uses: r-lib/actions/setup-pandoc@v2
 
       - name: Install dependencies
-        run: |
-          install.packages(c("bookdown", "rmarkdown", "knitr"), dependencies = TRUE)
-        shell: Rscript {0}
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          cache-version: 1
+          packages: |
+            any::bookdown
+            any::rmarkdown
+            any::knitr
+            any::pacman
+            any::kableExtra
+            any::readxl
+            any::readr
+            any::tidyverse
+            any::nlme
+            any::nmw
+            any::xpose4
+            any::svglite
 
       - name: Build book
         run: |

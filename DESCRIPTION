@@ -1,0 +1,17 @@
+Package: basic-pharmacometrics
+Title: Basic Pharmacometrics Book
+Version: 1.0.0
+Description: Sources for the Basic Pharmacometrics book.
+Imports:
+    bookdown,
+    rmarkdown,
+    knitr,
+    pacman,
+    kableExtra,
+    readxl,
+    readr,
+    tidyverse,
+    nlme,
+    nmw,
+    xpose4,
+    svglite
